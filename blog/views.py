@@ -7,6 +7,9 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("Hello, world. You're at my django blog index.")
 """
+from .models import Post
+from django.utils import timezone
 
 def post_list(request):
-	return render(request, 'blog/post_list.html', {})
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/post_list.html', {'posts': posts})
