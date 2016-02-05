@@ -7,7 +7,8 @@
 			<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
-    <body>
+ 
+   <body>
 		<div class="page-header">
         		<h1><a href="/">TA1DB's Django Blog</a></h1>
     		</div>
